@@ -23,3 +23,12 @@ php artisan make:scaffold Tweet \
 
 php artisan make:scaffold Post \
     --schema="user_id:integer , body:text"
+
+
+php artisan db:seed
+
+php artisan db:seed --class=UsersTableSeeder
+
+php artisan db:seed --class=PostTableSeeder
+
+composer require laracasts/testdummy
