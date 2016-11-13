@@ -21,7 +21,7 @@ class PostController extends Controller {
 	}
 
 	/**
-	 * Display a listing of the resource.
+	 * Display a listing posts in json objects.
 	 *
 	 * @return Response
 	 */
