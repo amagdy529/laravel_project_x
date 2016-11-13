@@ -32,3 +32,6 @@ php artisan db:seed --class=UsersTableSeeder
 php artisan db:seed --class=PostTableSeeder
 
 composer require laracasts/testdummy
+
+
+php artisan migrate:refresh --seed

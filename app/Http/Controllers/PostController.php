@@ -21,6 +21,19 @@ class PostController extends Controller {
 	}
 
 	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function indexJson()
+	{
+		$posts = Post::orderBy('id', 'desc')->paginate(10);
+
+		return response()->json($posts);
+
+	}
+
+	/**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
