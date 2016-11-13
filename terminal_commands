@@ -1,0 +1,25 @@
+laravel new laravel_project_x5
+
+cd laravel_project_x5
+
+php artisan make:auth
+php artisan migrate
+php artisan serv
+
+
+/*github commands to create a new repo*/
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/amagdy529/laravel_project_x.git
+git remote -v
+git push origin master
+
+
+composer require 'laralib/l5scaffold' --dev
+
+php artisan make:scaffold Tweet \
+    --schema="title:string:default('Tweet #1'), body:text"
+
+php artisan make:scaffold Post \
+    --schema="user_id:integer , body:text"
