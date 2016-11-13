@@ -35,3 +35,5 @@ composer require laracasts/testdummy
 
 
 php artisan migrate:refresh --seed
+
+composer require intervention/image 

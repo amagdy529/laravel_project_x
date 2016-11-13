@@ -8,7 +8,12 @@ use Illuminate\Http\Request;
 
 class PostApiController extends Controller {
 
-
+/*
+	public function __construct()
+	{
+	    $this->middleware('auth:api');
+	}
+*/
 
 	/**
 	 * Display a listing posts in json objects.

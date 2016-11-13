@@ -17,9 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');;
 Route::post('/create', 'HomeController@store');
 
 //Route::get('/home', 'PostController@getLoggedUserPosts');
 
 Route::resource("posts","PostController");
+
+
+Route::get('profile','UserController@profile');
+Route::post('profile','UserController@update_avatar');
