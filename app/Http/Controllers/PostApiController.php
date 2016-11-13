@@ -64,7 +64,8 @@ class PostApiController extends Controller {
 	{
 		$post = Post::findOrFail($id);
 
-		return view('posts.show', compact('post'));
+    return response()->json($post);
+
 	}
 
 	/**
@@ -92,11 +93,15 @@ class PostApiController extends Controller {
 		$post = Post::findOrFail($id);
 
 		$post->user_id = $request->input("user_id");
-        $post->body = $request->input("body");
+    $post->body = $request->input("body");
 
 		$post->save();
 
-		return redirect()->route('posts.index')->with('message', 'Item updated successfully.');
+		return response()->json([
+			"status" => "true",
+			"msg"    => "post updated successfully"
+		]);
+
 	}
 
 	/**
@@ -110,7 +115,11 @@ class PostApiController extends Controller {
 		$post = Post::findOrFail($id);
 		$post->delete();
 
-		return redirect()->route('posts.index')->with('message', 'Item deleted successfully.');
+		return response()->json([
+			"status" => "true",
+			"msg"    => "post deleted successfully"
+		]);
+
 	}
 
 }

@@ -19,6 +19,9 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/postsJson', 'PostController@indexJson');
 
-Route::get('/posts', 'PostApiController@index');
 
+Route::get('/posts', 'PostApiController@index');
 Route::post('/createPost', 'PostApiController@store');
+Route::post('/updatePost/{id}', 'PostApiController@update');
+Route::post('/deletePost/{id}', 'PostApiController@destroy');
+Route::get('post/{id}', 'PostApiController@show');
