@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
 
+
+use Auth;
+
+
 class PostController extends Controller {
 
 	/**
@@ -18,6 +22,19 @@ class PostController extends Controller {
 		$posts = Post::orderBy('id', 'desc')->paginate(10);
 
 		return view('posts.index', compact('posts'));
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function getLoggedUserPosts()
+	{
+		//return Auth::id();die;
+		$posts = Post::orderBy('id', 'desc')->where('user_id', Auth::id())->paginate(10);
+
+		return view('home', compact('posts'));
 	}
 
 	/**
