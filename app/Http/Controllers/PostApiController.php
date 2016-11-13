@@ -47,8 +47,11 @@ class PostApiController extends Controller {
     $post->body = $request->input("body");
 
 		$post->save();
-
-		return redirect()->route('posts.index')->with('message', 'Item created successfully.');
+		return response()->json([
+			"status" => "true",
+			"msg"    => "post created"
+		]);
+		//return redirect()->route('posts.index')->with('message', 'Item created successfully.');
 	}
 
 	/**

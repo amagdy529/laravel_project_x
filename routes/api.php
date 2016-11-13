@@ -21,4 +21,4 @@ Route::get('/postsJson', 'PostController@indexJson');
 
 Route::get('/posts', 'PostApiController@index');
 
-Route::post('/createPost', 'PostController@store');
+Route::post('/createPost', 'PostApiController@store');
