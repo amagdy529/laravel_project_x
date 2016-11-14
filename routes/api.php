@@ -23,5 +23,5 @@ Route::get('/postsJson', 'PostController@indexJson');
 Route::get('/posts', 'PostApiController@index');
 Route::put('/createPost', 'PostApiController@store');
 Route::post('/updatePost/{id}', 'PostApiController@update');
-Route::post('/deletePost/{id}', 'PostApiController@destroy');
+Route::delete('/deletePost/{id}', 'PostApiController@destroy');
 Route::get('post/{id}', 'PostApiController@show');

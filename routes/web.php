@@ -23,7 +23,7 @@ Route::post('/create', 'HomeController@store');
 //Route::get('/home', 'PostController@getLoggedUserPosts');
 
 Route::resource("posts","PostController");
-
+Route::resource("comments","CommentController");
 
 Route::get('profile','UserController@profile');
 Route::post('profile','UserController@update_avatar');

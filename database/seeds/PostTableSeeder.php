@@ -20,8 +20,8 @@ class PostTableSeeder extends Seeder {
         */
 
         // DB::table('posts')->insert([
-        //     'user_id' => str_random(3),
-        //     'body' => "body of post with random number" . str_random(10),
+        //     'user_id' => rand(1,2),
+        //     'body' => "body of post with random number" . rand(1,10),
         // ]);
 
 

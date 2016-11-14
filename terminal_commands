@@ -24,6 +24,9 @@ php artisan make:scaffold Tweet \
 php artisan make:scaffold Post \
     --schema="user_id:integer , body:text"
 
+php artisan make:scaffold Comment \
+    --schema="user_id:integer , post_id:integer , body:text"
+
 
 php artisan db:seed
 
@@ -36,4 +39,4 @@ composer require laracasts/testdummy
 
 php artisan migrate:refresh --seed
 
-composer require intervention/image 
+composer require intervention/image
