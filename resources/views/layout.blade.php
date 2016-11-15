@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="appX">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +21,6 @@
     <!-- Custom styles for this template -->
     <!-- <link href="starter-template.css" rel="stylesheet"> -->
 
-    <!-- angular libraries -->
-    <script type="text/javascript" src="../assets/js/angular.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../assets/js/angular-route.min.js"></script>
-    <script type="text/javascript" src="../assets/js/appX.js"></script>
-
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,10 +30,10 @@
     @yield('css')
 </head>
 
-<body>
+<body ng-app="appX">
 
     <nav class="navbar navbar-default">
-        <div class="container">
+        <div class="container" ng-click="al">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -108,6 +103,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- angular libraries -->
+    <script type="text/javascript" src="/js/angular.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="/js/appX.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
     @yield('scripts')
