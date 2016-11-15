@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="appX">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +20,11 @@
 
     <!-- Custom styles for this template -->
     <!-- <link href="starter-template.css" rel="stylesheet"> -->
+
+    <!-- angular libraries -->
+    <script type="text/javascript" src="../assets/js/angular.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../assets/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="../assets/js/appX.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
